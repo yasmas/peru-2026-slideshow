@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#211d19">
+  <meta name="description" content="Peru 2026 — a Vintage Rides photo journey through the Andes.">
+  <title>Peru 2026 · Vintage Rides Andes</title>
+  <link rel="stylesheet" href="style.css?v=video-recovery-1">
+  <script defer src="manifest.js?v=show-modes-1"></script>
+  <script defer src="playback_plan.js?v=show-modes-1"></script>
+  <script defer src="app.js?v=video-pool-1"></script>
+</head>
+<body>
+  <div class="app-shell is-paused">
+    <header class="masthead">
+      <div class="brand-lockup" aria-label="Vintage Rides Andes">
+        <span class="brand-mark">VR<span class="brand-dot">·</span>A</span>
+        <span class="brand-name">VINTAGE RIDES <i>ANDES</i></span>
+      </div>
+      <div class="route-line" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="edition">PERU <span>2026</span><small>THE RIDERS' EDITION</small></div>
+    </header>
+
+    <main class="theater" id="theater" aria-label="Peru 2026 slideshow">
+      <div class="edge-mark edge-left" aria-hidden="true">35MM · VINTAGE RIDES · 2026</div>
+      <div class="edge-mark edge-right" aria-hidden="true">AREQUIPA → TITICACA → AREQUIPA</div>
+      <div class="stage" id="stage" aria-live="polite"></div>
+      <div class="stage-corner tl"></div><div class="stage-corner tr"></div>
+      <div class="stage-corner bl"></div><div class="stage-corner br"></div>
+      <div class="launch-controls" id="launchControls">
+        <div class="mode-chooser" id="modeChooser" role="group" aria-label="Choose slideshow length">
+          <button id="quickMode" type="button" aria-pressed="true"><b>QUICK SHOW</b><small id="quickSummary"></small></button>
+          <button id="fullMode" type="button" aria-pressed="false"><b>FULL SHOW</b><small id="fullSummary"></small></button>
+        </div>
+      </div>
+      <div class="loading-note" id="loadingNote" hidden>Loading the next frame…</div>
+    </main>
+
+    <div class="chapter-drawer" id="chapterDrawer" hidden>
+      <div class="drawer-top"><span>THE JOURNEY / CHAPTERS</span><button id="closeChapters" type="button" aria-label="Close chapters">×</button></div>
+      <div class="chapter-list" id="chapterList"></div>
+    </div>
+
+    <footer class="control-desk">
+      <div class="travel-meta"><span class="eyebrow" id="chapterKicker">PROLOGUE / THE ROUTE</span><strong id="chapterName">Peru 2026</strong><span id="frameDate">SEP — OCT 2026</span></div>
+      <div class="transport">
+        <div class="transport-main">
+          <button id="prevBtn" class="icon-btn" type="button" aria-label="Previous slide" title="Previous · ←">⟵</button>
+          <button id="playBtn" class="play-btn" type="button" aria-label="Play slideshow" title="Play or pause · Space"><span id="playIcon">▶</span></button>
+          <button id="nextBtn" class="icon-btn" type="button" aria-label="Next slide" title="Next · →">⟶</button>
+        </div>
+        <button id="progress" class="progress-track" type="button" aria-label="Jump through the slideshow"><span id="progressFill"></span><span id="progressMarker"></span></button>
+        <div class="frame-count"><span id="frameCurrent">001</span><i>/</i><span id="frameTotal">250</span></div>
+      </div>
+      <div class="utility">
+        <button id="modeBtn" type="button" title="Switch show length while paused" aria-label="Switch to full slideshow">QUICK</button>
+        <button id="chaptersBtn" type="button" title="Browse chapters">ROUTE <span class="utility-symbol">⌄</span></button>
+        <button id="musicBtn" type="button" title="Toggle music" aria-label="Mute music">♫ <span id="musicState">ON</span></button>
+        <button id="fullscreenBtn" type="button" title="Fullscreen · F" aria-label="Enter fullscreen">⛶</button>
+      </div>
+    </footer>
+    <div class="track-credit" id="trackCredit" aria-live="polite">NOW PLAYING · ANANAU · ALBORADA</div>
+  </div>
+  <audio id="musicAudio" preload="auto"></audio>
+  <audio id="nextMusicAudio" preload="auto"></audio>
+  <noscript><div class="noscript">Please enable JavaScript to play the Peru 2026 slideshow.</div></noscript>
+</body>
+</html>
